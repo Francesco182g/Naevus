@@ -1,0 +1,47 @@
+.area {
+    width: 95%;
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid #333;
+    background: rgba(0,0,0,0.7);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .container .btn {
+    position: absolute;
+    top: 0%;
+    left: 80%;
+    transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    background-color: #03005a;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: right;
+  }
+
+  .container .cnt {
+    position: absolute;
+    width: 220px !important;
+    height: 220px !important;
+    top: 32%;
+    left: 25%;
+    border: none;
+  }
+
+
+  .container .btn:hover {
+    background-color: primary;
+  }

@@ -1,0 +1,20 @@
+ion-content {
+    --background: transparent;
+  }
+  
+  ion-avatar {
+    width: 170px !important;
+    height: 170px !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  ion-col > div {
+    background-color: #f7f7f7;
+    border: solid 1px #ddd;
+    padding: 10px;
+  }
+
+

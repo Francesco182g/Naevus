@@ -1,0 +1,44 @@
+{
+  "_args": [
+    [
+      "cordova-plugin-androidx-adapter@1.1.1",
+      "/home/userthink/Scrivania/Thesis/Ionic/Naevus"
+    ]
+  ],
+  "_development": true,
+  "_from": "cordova-plugin-androidx-adapter@1.1.1",
+  "_id": "cordova-plugin-androidx-adapter@1.1.1",
+  "_inBundle": false,
+  "_integrity": "sha512-ePt0WG7Y8jOFx2x3A6oXQyxzavis2ANw2hFlm7MU/H7ez1QKPXmWjA1zIIx4T/QdKWM5D8fLH60t2PyJmKSsOg==",
+  "_location": "/cordova-plugin-androidx-adapter",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cordova-plugin-androidx-adapter@1.1.1",
+    "name": "cordova-plugin-androidx-adapter",
+    "escapedName": "cordova-plugin-androidx-adapter",
+    "rawSpec": "1.1.1",
+    "saveSpec": null,
+    "fetchSpec": "1.1.1"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-androidx-adapter/-/cordova-plugin-androidx-adapter-1.1.1.tgz",
+  "_spec": "1.1.1",
+  "_where": "/home/userthink/Scrivania/Thesis/Ionic/Naevus",
+  "author": {
+    "name": "Dave Alden"
+  },
+  "dependencies": {
+    "performance-now": "^2.1.0",
+    "q": "^1.4.1",
+    "recursive-readdir": "^2.2.2"
+  },
+  "description": "Cordova/Phonegap plugin to migrate any code which references the legacy Android Support Library to the new AndroidX mappings in a Cordova Android platform project.",
+  "devDependencies": {},
+  "license": "MIT",
+  "name": "cordova-plugin-androidx-adapter",
+  "version": "1.1.1"
+}

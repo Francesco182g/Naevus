@@ -1,0 +1,172 @@
+  <ion-header >
+    <ion-segment *ngIf="shot==false" placeholder="Select Flash" [(ngModel)]="flashMode"
+    (ionChange)="changeFlashMode()">
+    <ion-segment-button value="off">
+      <ion-icon color="danger" name="flash-off"></ion-icon>
+      <ion-label color="danger" >Off</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="torch">
+      <ion-icon color="secondary" name="flash"></ion-icon>
+      <ion-label color="secondary">On</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <img *ngIf="shot==true" [src]="this.img_color">
+
+    <ion-range *ngIf="shot==true" min="0" max="10" step="1" [value]="color" snaps color="secondary">
+      <ion-text slot="start" size="small" color="primary">{{this.color}}</ion-text>
+      <ion-text slot="end" color="secondary">10</ion-text>
+    </ion-range>
+
+
+      <!--
+      <ion-segment placeholder="Select Focus" [(ngModel)]="focusMode"
+      (ionChange)="changeFocusMode()">
+        <ion-segment-button value="auto">
+          <ion-icon name="disc"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="fixed">
+          <ion-icon name="aperture"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="infinity">
+          <ion-icon name="infinite"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="macro">
+          <ion-icon name="search"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+    -->
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <!--
+  <ion-row *ngIf="activescreenshot==true">
+    <ion-col>
+      <img [src]="IMAGE_PATH">
+    </ion-col>
+  </ion-row>
+    -->
+
+  <ion-fab *ngIf="shot==true" horizontal="end" vertical="top" slot="fixed" >
+    <ion-fab-button>{{this.classified}} %</ion-fab-button>
+  </ion-fab>
+
+  <ion-grid *ngIf="shot==true">
+    <ion-row class="ion-align-items-end">
+      <ion-col class="ion-align-self-end">
+        Diametro
+        <ion-range *ngIf="shot==true" min="0" max="40" step="5" [value]="diameter" snaps color="danger">
+        <ion-text slot="start" size="small" color="danger">{{this.diameter}} mm</ion-text>
+        <ion-text slot="end" color="secondary">40 mm</ion-text>
+      </ion-range> 
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="shot==true">
+    <ion-row>
+      <ion-col>
+        Centroide
+        <ion-range *ngIf="shot==true" min="0" max="2" step="1" [value]="centroid" snaps color="danger">
+        <ion-icon slot="start" color="danger" name="arrow-back-circle"> </ion-icon>
+        <ion-icon slot="end" color="danger" name="arrow-forward-circle"> </ion-icon>
+      </ion-range> 
+      </ion-col>
+      <ion-col>
+        {{this.symmetricInfo}}
+          <ion-range *ngIf="shot==true" min="0" max="15" step="1" [value]="asymmetry" snaps color="danger">
+          <ion-text slot="start" size="small" color="primary">Asim</ion-text>
+          <ion-text slot="end" color="secondary">Sim</ion-text>
+        </ion-range>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="shot==true">
+    <ion-row>
+      <ion-col>
+        <!--<div>elemento</div>-->
+      </ion-col>
+      <ion-col>
+        <!--<div>elemento</div>-->
+      </ion-col>
+      <ion-col>
+        <!--<div>elemento</div>-->
+      </ion-col>
+      <ion-col >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="shot==true">
+    <ion-row>
+      <ion-col>
+        <img (click)="openImage(this.ipAddress + '/media/photometric.png')"  [src]="this.img_photometric">
+      </ion-col>
+      <ion-col>
+        <!--<div>elemento</div>-->
+      </ion-col>
+      <ion-col>
+        <!--<div>elemento</div>-->
+      </ion-col>
+      <ion-col >
+        <!--<div>elemento</div>-->
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="shot==true">
+    <ion-row>
+      <ion-col>
+        
+      </ion-col>
+      <ion-col>
+        <img (click)="openImage(this.ipAddress + '/media/border1.png')" [src]="this.img_border1">
+      </ion-col>
+      <ion-col>
+        <!--<div>elemento</div>-->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-avatar  vertical="center" horizontal="center">
+    <img src="assets/circle.png">
+  </ion-avatar>
+
+</ion-content>
+<ion-footer>
+  <ion-range  min="1" max="25" pin color="primary" [(ngModel)]="setZoom" (ionChange)="changeZoom()">
+    <ion-icon color="primary" slot="start" size="small" name="search-outline"></ion-icon>
+    <ion-icon slot="end" name="search-outline"></ion-icon>
+  </ion-range>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button *ngIf="startAR==true" expand="block" color="primary"(click)="saveScreenshot()">
+          <ion-icon  size="big" name="save-outline"></ion-icon>
+        </ion-button>    
+        <ion-button *ngIf="startAR==false" expand="block" color="primary"(click)="getInfo()">
+          <ion-icon  size="big" name="information-circle-outline" ></ion-icon>
+        </ion-button>     
+      </ion-col>
+      <ion-col>
+        <ion-button *ngIf="startAR==true" expand="block" color="danger" (click)="switchOff()">
+          <ion-icon  size="big" name="close-circle"></ion-icon>
+        </ion-button> 
+        <ion-button *ngIf="startAR==false" expand="block" color="success" (click)="takePicture()">
+          <ion-icon  size="big" name="camera-outline"></ion-icon>
+        </ion-button>            
+      </ion-col>
+    
+    </ion-row>
+  </ion-grid>
+</ion-footer>
+
+

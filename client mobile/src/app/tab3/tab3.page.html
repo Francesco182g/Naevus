@@ -1,0 +1,30 @@
+<ion-header *ngIf="!nameOfSource">
+  <ion-toolbar color="primary">
+    <ion-title>TEST PAGE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  [color]="dark" padding >
+  <input type="file" accept="image/*" ng2FileSelect [uploader]="fileUploader" *ngIf="!nameOfSource" />
+  <ion-button (click)="uploadFiles()" *ngIf="!nameOfSource">Start Analysis</ion-button>
+
+  <!--
+  <ion-row>
+    <ion-col>
+      <img src="http://192.168.1.2:8000/media/mel.jpg">
+    </ion-col>
+  </ion-row>
+  -->
+      
+    <div class="container" *ngIf="nameOfSource" >
+          <ion-img [src]="nameOfSource" alt="errore"></ion-img>
+    <ion-button class="btn" expand="full">{{classificatore}}</ion-button>
+    <ion-avatar class="cnt" vertical="center" horizontal="center" >
+      <img src="https://www.pngkit.com/png/full/422-4220644_dotted-circle-outline-pictures-to-pin-on-pinterest.png">
+    </ion-avatar>
+    <ion-button expand="full">Asymmetry {{asymmetry}}</ion-button>
+  </div>
+
+    <ion-button expand="full" (click)="reset()"*ngIf="nameOfSource" >Another Analysis</ion-button>
+
+</ion-content>

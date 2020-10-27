@@ -1,0 +1,7 @@
+{
+  "name": "Naevus",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

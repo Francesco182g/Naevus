@@ -1,0 +1,54 @@
+<ion-header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guida Naevus</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/css/ionic.bundle.css"/>
+
+</ion-header>
+
+<body>
+  <ion-app>
+
+    <ion-content fullscreen padding scroll-y="false">
+      <ion-slides>
+
+        <ion-slide>
+          <img src="assets/slide-1.png"/>
+          <h2>Benvenuto su <b>Naevus BETA</b></h2>
+          <p>L'applicazione <b>Naevus</b> aiuta il dermatologo nell'analisi del nevo.</p>
+          <p><b>ATTENZIONE! </b> L'applicazione è in fase BETA.</p>
+          <ion-button fill="clear">Swipe <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+        </ion-slide>
+
+        <ion-slide>
+          <img src="assets/slide-2.png"/>
+          <h2>Come funziona?</h2>
+          <p><b>Naevus</b> attiva il motore AR di analisi cliccando il tasto di Analisi: </p>
+          <ion-button fill="clear">Swipe <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+        </ion-slide>
+
+        <ion-slide>
+          <img src="assets/slide-3.png"/>
+          <h2>Analisi</h2>
+          <p><b>Naevus</b> analizza in nevo e mostra le informazioni in realtà aumentata sullo schermo.</p>
+          <ion-button fill="clear">Swipe <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+        </ion-slide>
+
+        <ion-slide>
+          <img src="assets/slide-4.png"/>
+          <h2>Torna all'app:</h2>
+          <ion-button (click)="backToApp()" fill="clear">Torna all'app! <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+        </ion-slide>
+      </ion-slides>
+    </ion-content>
+  </ion-app>
+</body>
+
+      <!--
+    </ion-content>
+
+    
+    </ion-content>
+-->
