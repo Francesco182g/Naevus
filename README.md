@@ -25,16 +25,16 @@ Suggested:
 
 1. Clone the repo
 ```sh
-git clone https://github.com/your_username_/Project-Name.git
+git clone https://github.com/Francesco182g/Naevus
 ```
-2. Install NPM packages on client folder
+2. Install NPM packages on CLIENT folder
 ```sh
 npm install
 ```
-3. Install requirements on server folder
+3. Install requirements on SERVER folder
 ```Py
 pip install -r requirements.txt
 ```
-4. Set Server IP address on Client in ts file and manifest
+4. Set Server local IP address on Client in ts file and manifest
 
-5. Set IP Server address on Server Django configuration
+5. Set local IP Server address on Server Django configuration
