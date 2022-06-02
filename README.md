@@ -38,3 +38,5 @@ pip install -r requirements.txt
 4. Set Server local IP address on Client in ts file and manifest
 
 5. Set local IP Server address on Server Django configuration
+
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
